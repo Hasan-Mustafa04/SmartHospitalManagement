@@ -1,20 +1,37 @@
-# Hospital Management System - Week 1
+# Hospital Management System - Week 2
 
 ## Overview
-Week 1 focuses on the basic setup and authentication system for the Hospital Management System.
+Week 2 builds upon Week 1 by adding comprehensive patient management features.
 
 ## Features Implemented
-- ✅ Project structure setup (Frontend + Backend)
-- ✅ User authentication (Login/Register)
-- ✅ JWT token-based authorization
-- ✅ Role-based access control (Admin, Doctor, Patient, etc.)
-- ✅ Database setup with user management
-- ✅ Basic UI components and styling
+- ✅ **Week 1 Features** (Basic setup and authentication)
+- ✅ **Patient Management**: CRUD operations for patient records
+- ✅ **Patient Portal**: Dashboard, appointments, prescriptions
+- ✅ **Patient Registration**: New patient onboarding
+- ✅ **Patient Search & Filtering**: Find patients by various criteria
+- ✅ **Patient History**: Medical history tracking
+- ✅ **Patient Forms**: Registration and profile update forms
 
 ## Tech Stack
 - **Frontend**: Next.js 14, React, Tailwind CSS, Shadcn/ui
 - **Backend**: Node.js, Express.js, MySQL
 - **Authentication**: JWT, bcrypt
+
+## New Endpoints (Week 2)
+### Patient Management
+- `GET /api/patients` - List all patients
+- `POST /api/patients` - Create new patient
+- `GET /api/patients/:id` - Get patient details
+- `PUT /api/patients/:id` - Update patient
+- `DELETE /api/patients/:id` - Delete patient
+
+### Patient Portal
+- `GET /api/patient/dashboard` - Patient dashboard data
+- `GET /api/patient/appointments` - Patient's appointments
+- `POST /api/patient/appointments` - Book appointment
+- `GET /api/patient/prescriptions` - Patient prescriptions
+- `GET /api/patient/lab-reports` - Lab reports
+- `GET /api/patient/invoices` - Billing invoices
 
 ## Getting Started
 
@@ -72,21 +89,23 @@ Week 1 focuses on the basic setup and authentication system for the Hospital Man
 ## Project Structure
 ```
 ├── app/                    # Next.js app directory
+│   └── patient/           # Patient portal pages
 ├── backend/               # Express.js backend
-│   ├── config/           # Database configuration
-│   ├── controllers/      # Route controllers
+│   ├── controllers/      # Route controllers (auth, patient)
 │   ├── middleware/       # Authentication middleware
-│   ├── routes/          # API routes
+│   ├── routes/          # API routes (auth, patients, patient-portal)
 │   └── scripts/         # Database setup scripts
 ├── components/           # Reusable UI components
 ├── lib/                  # Utility functions
+├── src/                  # Additional source files
+│   ├── services/        # API service functions
+│   └── components/      # React components
 └── public/              # Static assets
 ```
 
 ## Next Weeks
-- **Week 2**: Patient management system
-- **Week 3**: Appointment scheduling
-- **Week 4**: Billing and reporting
+- **Week 3**: Appointment scheduling and management
+- **Week 4**: Billing, pharmacy, and lab management
 
 ## Contributing
 This is Week 1 of a 4-week project development series.
