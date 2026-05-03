@@ -1,7 +1,7 @@
-# Hospital Management System - Week 1
+# Hospital Management System - Week 1-4
 
 ## Overview
-Week 1 focuses on the basic setup and authentication system for the Hospital Management System.
+Week 1-4 focuses on the basic setup and authentication system for the Hospital Management System.
 
 ## Features Implemented
 - ✅ Project structure setup (Frontend + Backend)
@@ -84,9 +84,7 @@ Week 1 focuses on the basic setup and authentication system for the Hospital Man
 ```
 
 ## Next Weeks
-- **Week 2**: Patient management system
-- **Week 3**: Appointment scheduling
-- **Week 4**: Billing and reporting
+- **Week 4-8**: Patient management system
+- **Week 9-13**: Appointment scheduling
+- **Week 14-17**: Billing and reporting
 
-## Contributing
-This is Week 1 of a 4-week project development series.
