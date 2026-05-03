@@ -1,37 +1,42 @@
-# Hospital Management System - Week 2
+# Hospital Management System - Weeks 9-13
 
 ## Overview
-Week 2 builds upon Week 1 by adding comprehensive patient management features.
+Weeks 9-13 focus on comprehensive appointment scheduling and management system.
 
 ## Features Implemented
-- ✅ **Week 1 Features** (Basic setup and authentication)
-- ✅ **Patient Management**: CRUD operations for patient records
-- ✅ **Patient Portal**: Dashboard, appointments, prescriptions
-- ✅ **Patient Registration**: New patient onboarding
-- ✅ **Patient Search & Filtering**: Find patients by various criteria
-- ✅ **Patient History**: Medical history tracking
-- ✅ **Patient Forms**: Registration and profile update forms
+- ✅ **Weeks 1-8 Features** (Basic setup, auth, patient management)
+- ✅ **Appointment Scheduling**: Book, reschedule, cancel appointments
+- ✅ **Doctor Availability**: Set and manage doctor schedules
+- ✅ **Appointment Management**: View, update, and manage all appointments
+- ✅ **Calendar Integration**: Date/time slot management
+- ✅ **Appointment Status Tracking**: Scheduled, completed, cancelled
+- ✅ **Doctor-Patient Assignment**: Link appointments to specific doctors
+- ✅ **Appointment History**: Track all appointment records
 
 ## Tech Stack
 - **Frontend**: Next.js 14, React, Tailwind CSS, Shadcn/ui
 - **Backend**: Node.js, Express.js, MySQL
 - **Authentication**: JWT, bcrypt
 
-## New Endpoints (Week 2)
-### Patient Management
-- `GET /api/patients` - List all patients
-- `POST /api/patients` - Create new patient
-- `GET /api/patients/:id` - Get patient details
-- `PUT /api/patients/:id` - Update patient
-- `DELETE /api/patients/:id` - Delete patient
+## New Endpoints (Weeks 9-13)
+### Appointment Management
+- `GET /api/appointments` - List all appointments
+- `POST /api/appointments` - Create new appointment
+- `GET /api/appointments/:id` - Get appointment details
+- `PUT /api/appointments/:id` - Update appointment
+- `DELETE /api/appointments/:id` - Delete appointment
+- `PATCH /api/appointments/:id/status` - Update appointment status
 
-### Patient Portal
-- `GET /api/patient/dashboard` - Patient dashboard data
+### Doctor Availability
+- `GET /api/doctors/:id/availability` - Get doctor availability
+- `POST /api/doctors/:id/availability` - Set doctor availability
+- `PUT /api/doctors/:id/availability` - Update availability
+
+### Patient Appointments
 - `GET /api/patient/appointments` - Patient's appointments
 - `POST /api/patient/appointments` - Book appointment
-- `GET /api/patient/prescriptions` - Patient prescriptions
-- `GET /api/patient/lab-reports` - Lab reports
-- `GET /api/patient/invoices` - Billing invoices
+- `PUT /api/patient/appointments/:id` - Reschedule appointment
+- `PATCH /api/patient/appointments/:id/cancel` - Cancel appointment
 
 ## Getting Started
 
@@ -89,11 +94,13 @@ Week 2 builds upon Week 1 by adding comprehensive patient management features.
 ## Project Structure
 ```
 ├── app/                    # Next.js app directory
-│   └── patient/           # Patient portal pages
+│   ├── patient/           # Patient portal pages
+│   ├── doctor/            # Doctor pages (appointments, availability)
+│   └── admin/             # Admin pages (user management)
 ├── backend/               # Express.js backend
-│   ├── controllers/      # Route controllers (auth, patient)
+│   ├── controllers/      # Route controllers (auth, patient, appointment)
 │   ├── middleware/       # Authentication middleware
-│   ├── routes/          # API routes (auth, patients, patient-portal)
+│   ├── routes/          # API routes (auth, patients, appointments)
 │   └── scripts/         # Database setup scripts
 ├── components/           # Reusable UI components
 ├── lib/                  # Utility functions
@@ -103,9 +110,11 @@ Week 2 builds upon Week 1 by adding comprehensive patient management features.
 └── public/              # Static assets
 ```
 
-## Next Weeks
-- **Week 3**: Appointment scheduling and management
-- **Week 4**: Billing, pharmacy, and lab management
+## Development Phases
+- **Weeks 1-4**: Basic setup and authentication system
+- **Weeks 4-8**: Patient management system
+- **Weeks 9-13**: Appointment scheduling and management
+- **Weeks 14-17**: Billing, pharmacy, and lab management
 
 ## Contributing
 This is Week 1 of a 4-week project development series.
